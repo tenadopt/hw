@@ -14,8 +14,7 @@ export const pureAddUser = (name: string, setError: React.Dispatch<SetStateActio
         setError('Ошибка! Введите имя!')
         setName('')
     } else {
-        addUserCallback(name)
-        setName(name)
+        addUserCallback(name.trim())
         setName('')
     }
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
@@ -61,9 +60,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
         pureOnEnter(e, addUser)
     }
-console.log(users)
+
     const totalUsers = users.length // need to fix
-    const lastUserName = name // need to fix
+    const lastUserName = users[users.length-1]?.name || name // need to fix
 
     return (
         <Greeting

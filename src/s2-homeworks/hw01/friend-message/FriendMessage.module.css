@@ -1,7 +1,6 @@
 .friendMessage {
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat';
 }
 
 .friendImageAndText {
@@ -21,6 +20,7 @@
     border-radius: 5px;
     margin-left: 10px;
     padding-left: 5px;
+    font-size: 14px;
 }
 
 .friendText:after {
@@ -46,11 +46,11 @@
 }
 
 .friendName {
-
+    font-size: 18px;
 }
 
 .friendMessageText {
-
+    font-size: 16px;
 }
 
 .friendTime {

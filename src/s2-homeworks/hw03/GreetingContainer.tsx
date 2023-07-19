@@ -4,6 +4,7 @@ import {UserType} from './HW3'
 import { Simulate} from "react-dom/test-utils";
 import error = Simulate.error;
 
+
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
     addUserCallback: (name: string) => void // need to fix any

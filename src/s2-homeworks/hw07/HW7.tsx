@@ -12,13 +12,23 @@ import s from './HW7.module.css'
 * */
 
 const arr = [
-    { id: 1, value: 'x' },
-    { id: 2, value: 'y' },
-    { id: 3, value: 'z' },
+    { id: 1, value: 'PreJunior' },
+    { id: 2, value: 'Junior' },
+    { id: 3, value: 'JuniorPlus' },
 ] // value может быть изменено
 
 const HW7 = () => {
+
     const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
+
+        const handleSelectChange = (option:any) => {
+            onChangeOption(option);
+        };
+
+        const handleRadioChange = (option:any) => {
+            onChangeOption(option);
+        };
+    console.log(value)
 
     return (
         <div id={'hw7'}>
@@ -32,7 +42,7 @@ const HW7 = () => {
                             id={'hw7-super-select'}
                             options={arr}
                             value={value}
-                            onChangeOption={onChangeOption}
+                            onChangeOption={handleSelectChange}
                         />
                     </div>
                     <div>
@@ -41,7 +51,7 @@ const HW7 = () => {
                             name={'hw7-radio'}
                             options={arr}
                             value={value}
-                            onChangeOption={onChangeOption}
+                            onChangeOption={handleRadioChange}
                         />
                     </div>
                 </div>

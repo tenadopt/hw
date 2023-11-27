@@ -12,7 +12,7 @@ function Clock() {
     const minutes = date.getMinutes()
     const seconds = date.getSeconds()
     const day = date.getDate()
-    const month = +date.getMonth()
+    const month = date.getMonth()+1
     const year = date.getFullYear()
 
 

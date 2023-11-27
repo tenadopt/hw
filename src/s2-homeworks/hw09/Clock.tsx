@@ -15,8 +15,9 @@ function Clock() {
     const month = date.getMonth()
     const year = date.getFullYear()
 
-    let strTime = `${hours.toString()}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
-    let strDate = `${day.toString().padStart(2,'0')}:${month.toString().padStart(2,'0')}:${year}`
+
+    let strTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
+    let strDate = `${day.toString().padStart(2,'0')}.${month.toString().padStart(2,'0')}.${year}`
     let strDay = date.toLocaleString('en-US', {weekday: 'long'})
     let strMonth = date.toLocaleString('en-US', {month: 'long'}).padStart(2, '0')
 

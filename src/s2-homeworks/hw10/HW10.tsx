@@ -17,11 +17,12 @@ const HW10 = () => {
     // useSelector, useDispatch // пишет студент
     const isLoading = useSelector((state: AppStoreType) => state.loading.isLoading);
     const dispatch = useDispatch();
+    console.log(isLoading)
 
     const setLoading = () => { // пишет студент // показать крутилку на 1,5 секунд
         // dispatch
         dispatch(loadingAC(true));
-
+        console.log(isLoading)
         // setTimeout
         setTimeout(() => {
             dispatch(loadingAC(false));

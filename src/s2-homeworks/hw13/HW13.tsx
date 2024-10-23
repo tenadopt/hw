@@ -58,7 +58,7 @@ const HW13 = () => {
                     setCode('Unknown Error!')
                     setImage(errorUnknown)
                     setText('Error')
-                    setInfo('An unknown error occurred.')
+                    setInfo('Error')
                 }
             })
             .finally(() => {

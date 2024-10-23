@@ -40,7 +40,7 @@ const HW13 = () => {
                 setImage(success200)
                 // дописать
                 setText('...всё ок)')
-                setInfo('Request was successful.')
+                setInfo('код 200 - обычно означает что скорее всего всё ок')
             })
             .catch((e) => {
                 // дописать
@@ -48,14 +48,14 @@ const HW13 = () => {
                     setCode('Ошибка 400!')
                     setImage(error400)
                     setText('Ты не отправил success в body вообще!')
-                    setInfo('Incorrect request. Check the sent data.')
+                    setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
                 } else if (e.response?.status === 500) {
                     setCode('Ошибка 500!')
                     setImage(error500)
-                    setText('Имитация ошибки на сервере')
-                    setInfo('Something went wrong on the server.')
+                    setText('эмитация ошибки на сервере')
+                    setInfo('Сервер вернул ошибку.')
                 } else {
-                    setCode('Unknown Error!')
+                    setCode('Error')
                     setImage(errorUnknown)
                     setText('Error')
                     setInfo('Error')

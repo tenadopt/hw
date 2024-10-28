@@ -14,9 +14,9 @@ import {AppStoreType} from "../hw10/bll/store";
 * */
 
 const themes = [
-    {id: 1, value: 'light'},
-    {id: 2, value: 'blue'},
-    {id: 3, value: 'dark'},
+    {id: 1, value: 'Light'},
+    {id: 2, value: 'Blue'},
+    {id: 3, value: 'Dark'},
 ]
 
 const HW12 = () => {
@@ -40,14 +40,19 @@ const HW12 = () => {
             </div>
 
             <div className={s2.hw}>
-                <SuperSelect
-                    id={'hw12-select-theme'}
-                    className={s.select}
-                    // сделать переключение тем
-                    options={themes}
-                    value={themeId}
-                    onChangeOption={change}
-                />
+                <div className={s.container}>
+                    <span className={s.selectTitle}>
+                        Выберите тему
+                    </span>
+                    <SuperSelect
+                        id={'hw12-select-theme'}
+                        className={s.select}
+                        // сделать переключение тем
+                        options={themes}
+                        value={themeId}
+                        onChangeOption={change}
+                    />
+                </div>
             </div>
         </div>
     )

@@ -1,9 +1,22 @@
 .container {
-
+    margin-top: 40px;
 }
 
 .wrapper {
+    display: flex;
+    align-items: center;
+    height: 18px;
+    margin-bottom: 42px;
 }
 
-.number {
+.number{
+    width: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+}
+
+.number:last-of-type {
+   margin-left: 22px;
 }

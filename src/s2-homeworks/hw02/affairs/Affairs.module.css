@@ -1,7 +1,7 @@
 .buttonContainer {
     display: flex;
-    gap: 24px;
     margin-bottom: 32px;
+    margin-top: 12px;
 }
 
 .all {
@@ -21,7 +21,9 @@
 }
 
 .button {
-    padding: 5px 15px;
+    padding: 5px 13px;
+    margin-right: 27px;
+
 
     background: transparent;
     color: var(--color);
@@ -49,7 +51,8 @@
 
 .affairs {
     display: flex;
-    gap: 17px;
+    row-gap: 24px;
+    column-gap: 17px;
     flex-wrap: wrap;
     max-width: 450px;
 }

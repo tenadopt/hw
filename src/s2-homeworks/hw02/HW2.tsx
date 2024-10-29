@@ -12,10 +12,9 @@ export type FilterType = 'all' | AffairPriorityType
 
 const defaultAffairs: AffairType[] = [
     {_id: 1, name: 'React', priority: 'high'},
-    {_id: 2, name: 'anime', priority: 'low'},
-    {_id: 3, name: 'games', priority: 'low'},
-    {_id: 4, name: 'work', priority: 'high'},
-    {_id: 5, name: 'html & css', priority: 'middle'},
+    {_id: 2, name: 'Games', priority: 'low'},
+    {_id: 3, name: 'Anime', priority: 'low'},
+    {_id: 4, name: 'Work', priority: 'high'},
 ]
 
 export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => {

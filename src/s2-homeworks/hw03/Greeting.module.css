@@ -7,7 +7,7 @@
 .inputAndButtonContainer {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 12px;
     align-items: start;
 }
 
@@ -19,23 +19,26 @@
 .input {
     width: 372px;
     height: 36px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+    padding-left: 12px;
+    margin-bottom: 7px;
 }
 
 .input:focus {
     solid-color: grey;
-    width: 372px;
-    height: 36px;
 }
 
 .errorInput {
     border-color: #cc0000;
-    width: 372px;
-    height: 36px;
 }
 
 .button {
     width: 78px;
     height: 36px;
+    border: none;
     background-color: #0066CC;
     border-radius: 5px;
     color: #FFFFFF;
@@ -53,6 +56,7 @@
 
 .text {
     font-size: 14px;
+    color: #00000080;
 }
 
 .greeting {

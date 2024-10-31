@@ -39,19 +39,24 @@ const HW6 = () => {
                         onChangeText={setValue}
                         spanProps={{
                             id: 'hw6-editable-span',
-                            defaultText: 'enter text...',
+                            defaultText: 'Edit text',
                         }}
+                        autoComplete='off'
                     />
                 </div>
 
                 <div className={s.buttonsContainer}>
-                    <SuperButton id={'hw6-save'} onClick={save}>
+                    <SuperButton
+                        id={'hw6-save'}
+                        xType={'default'}
+                        onClick={save}
+                    >
                         Save to ls
                     </SuperButton>
                     <SuperButton
                         id={'hw6-restore'}
-                        onClick={restore}
                         xType={'secondary'}
+                        onClick={restore}
                     >
                         Get from ls
                     </SuperButton>

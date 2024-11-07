@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-// добавить в проект иконки и импортировать
 const downIcon = '[\\/]'
 const upIcon = '[/\\]'
 const noneIcon = '[--]'
@@ -15,12 +13,14 @@ export type SuperSortPropsType = {
 
 export const pureChange = (sort: string, down: string, up: string) => {
     if (sort === down) {
-        return '';
+        return up; // If currently sorted descending, reset to no sort
     } else if (sort === up) {
-        return down;
+        return ''; // If currently sorted ascending, switch to descending
+    } else if (sort === '') {
+        return down; // If no sort is applied, default to ascending
     }
-    return up;
-}
+    return down; // Default case: set to ascending
+};
 
 const SuperSort: React.FC<SuperSortPropsType> = (
     {
@@ -31,7 +31,6 @@ const SuperSort: React.FC<SuperSortPropsType> = (
     const down = '1' + value
 
     const onChangeCallback = () => {
-        console.log('Sort changed from:', sort, 'to:', pureChange(sort, down, up));
         onChange(pureChange(sort, down, up));
     }
 
@@ -47,13 +46,11 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             onClick={onChangeCallback}
             style={{ cursor: 'pointer' }}
         >
-            {/*сделать иконку*/}
             <img
                 id={id + '-icon-' + sort}
                 src={icon}
+                alt="Sort Icon"
             />
-
-            {/*{icon} /!*а это убрать*!/*/}
         </span>
     )
 }

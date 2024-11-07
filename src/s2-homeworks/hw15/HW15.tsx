@@ -56,6 +56,7 @@ const HW15 = () => {
                 // сохранить пришедшие данные
 
                 //
+
                 if (res) {
                     setTechs(res.data.techs)
                     setTotalCount(res.data.totalCount)
@@ -82,7 +83,7 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        sendQuery({ sort: newSort, page: '1', count})
+        sendQuery({ sort: newSort, page: 1, count})
         setSearchParams({ sort: newSort, page: '1', count: count.toString() })
 
         //
